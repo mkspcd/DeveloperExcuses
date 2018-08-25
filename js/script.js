@@ -19,7 +19,7 @@ new Vue({
         this.init(source.quotes)
       })
       .catch(() => {
-        fetch(this.githubRequest)
+        fetch(this.githubURI)
           .then(response => response.json())
           .then(source => {
             this.init(source.quotes)
@@ -49,8 +49,6 @@ new Vue({
       do {
         this.index = Math.floor(Math.random() * this.quotes.length)
       } while (this.index === this.previousIndex)
-      
-      
     },
     addQuotationMarks: quote => '« ' + quote + ' »'
   }
