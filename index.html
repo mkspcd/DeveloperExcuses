@@ -9,23 +9,30 @@
   <!-- Skeletton css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
   <!-- Custom css -->
-  <link rel="stylesheet" href="./css/style.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <!-- Google fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
 
   <title>Developer Excuses</title>
+  <link rel="icon" type="image/png" href="./img/favicon.png" />
 </head>
 
 <body>
   <div id="app">
-    <content>
+    <template v-if="isFetching">
+      <section class="loading">
+        <span class="loading__anim"></span>
+      </section>
+    </template>
+
+    <content class="content" v-else>
       <h1>
         <span class="quotation-marks">« </span>{{ quote }}
         <span class="quotation-marks"> »</span>
       </h1>
       <h5 id="author">{{ author }}</h5>
     </content>
-
+    
     <button @click="randomQuote">Refresh</button>
   </div>
 
