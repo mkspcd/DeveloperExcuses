@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Skeletton css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+  <!-- Custom css -->
+  <link rel="stylesheet" href="./css/style.min.css" />
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+
+  <title>Developer Excuses</title>
+</head>
+
+<body>
+  <div id="app">
+    <content>
+      <h1>
+        <span class="quotation-marks">« </span>{{ quote }}
+        <span class="quotation-marks"> »</span>
+      </h1>
+      <h5 id="author">{{ author }}</h5>
+    </content>
+
+    <button @click="randomQuote">Refresh</button>
+  </div>
+
+  <!-- Vue.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+  <!-- Custom script -->
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
