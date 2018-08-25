@@ -6,7 +6,8 @@ new Vue({
       author: String,
       quotes: Array,
       dropboxURI: 'https://dl.dropboxusercontent.com/s/5kminh6mr9wnhe6/quotes.json?dl=1',
-      githubURI: 'https://raw.githubusercontent.com/mkspcd/DeveloperExcuses/master/quotes.json'
+      githubURI: 'https://raw.githubusercontent.com/mkspcd/DeveloperExcuses/master/quotes.json',
+      isFetching: true
     }
   },
   created() {
@@ -30,6 +31,7 @@ new Vue({
     init(data) {
       this.quotes = data
       this.randomQuote()
+      this.isFetching = false
     },
     randomQuote() {
       const randomIndex = Math.floor(Math.random() * this.quotes.length)
