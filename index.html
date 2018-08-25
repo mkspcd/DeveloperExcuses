@@ -19,11 +19,9 @@
 
 <body>
   <div id="app">
-    <template v-if="isFetching">
-      <section class="loading">
-        <span class="loading__anim"></span>
-      </section>
-    </template>
+    <section class="loading" v-if="isFetching">
+      <span class="loading__anim"></span>
+    </section>
 
     <content class="content" v-else>
       <h1>
