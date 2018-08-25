@@ -7,7 +7,9 @@ new Vue({
       quotes: Array,
       dropboxURI: 'https://dl.dropboxusercontent.com/s/5kminh6mr9wnhe6/quotes.json?dl=1',
       githubURI: 'https://raw.githubusercontent.com/mkspcd/DeveloperExcuses/master/quotes.json',
-      isFetching: true
+      isFetching: true,
+      previousIndex: Number,
+      index: Number
     }
   },
   created() {
@@ -34,13 +36,21 @@ new Vue({
       this.isFetching = false
     },
     randomQuote() {
-      const randomIndex = Math.floor(Math.random() * this.quotes.length)
+      this.drawNewIndex()
 
-      this.quote = this.quotes[randomIndex].text
+      this.quote = this.quotes[this.index].text
       this.author =
-        this.quotes[randomIndex].author !== '' ?
-        this.quotes[randomIndex].author :
+        this.quotes[this.index].author !== '' ?
+        this.quotes[this.index].author :
         'Anonyme'
+    },
+    drawNewIndex() {
+      this.previousIndex = this.index
+      do {
+        this.index = Math.floor(Math.random() * this.quotes.length)
+      } while (this.index === this.previousIndex)
+      
+      
     },
     addQuotationMarks: quote => '« ' + quote + ' »'
   }
