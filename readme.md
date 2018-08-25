@@ -1,7 +1,7 @@
 # Developer Excuses
-A collection of good excuses for developers.  
+A collection of good excuses for developers. All excuses have been heard or used in a working environment.  
 
-All excuses have been heard or used in a working environment.  
+Project made using [Vue.js](https://vuejs.org/index.html)
 
 Go to the live [**website here**](https://mkspcd.github.io/DeveloperExcuses/).  
   
