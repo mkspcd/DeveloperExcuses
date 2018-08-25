@@ -36,7 +36,7 @@ button {
   right: 10%;
 }
 
-button:hover {
+button:hover, button:focus {
   color: #ff4637;
   border-color: #ff4637;
 }
