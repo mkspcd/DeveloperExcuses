@@ -32,7 +32,7 @@
 .content {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -55,6 +55,13 @@ button {
   bottom: 10%;
   right: 10%;
 }
+
+@media only screen and (max-width: 600px) {
+  button {
+    bottom: 4%;
+  }
+}
+
 
 button:hover, button:focus {
   color: #ff4637;
